@@ -17,7 +17,6 @@ export default function Home() {
         <h1 className="text-5xl font-bold tracking-tight">
           Grow with Glow today
         </h1>
-        {/* <p className="mt-6 text-lg leading-8 text-gray-300">Join the Glow network today to expand your business </p> */}
         <div className="w-full mt-10 flex items-center justify-center gap-x-6">
           <Button
             color={AppColor.PRIMARY}

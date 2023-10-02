@@ -20,7 +20,6 @@ export default function RootLayout({
             <Image
               src="/glow-0.svg"
               alt="Glow Logo"
-              // className="dark:invert"
               height={48}
               width={48}
               priority
