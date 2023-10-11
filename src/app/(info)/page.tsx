@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Button, { ButtonSize } from "../components/Button";
-import { AppColor } from "../utils/color";
+import { AppColor, Size } from "../components";
+import Button from "../components/Button";
 
 export const metadata: Metadata = {
   title: "Glow",
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="w-full mt-10 flex items-center justify-center gap-x-6">
           <Button
             color={AppColor.PRIMARY}
-            size={ButtonSize.LARGE}
+            size={Size.XL2}
             primary
             className="font-semibold"
             style={{ minWidth: 120 }}
@@ -29,7 +29,7 @@ export default function Home() {
           </Button>
           <Button
             color={AppColor.PRIMARY}
-            size={ButtonSize.LARGE}
+            size={Size.XL2}
             className="font-semibold"
             style={{ minWidth: 120 }}
           >
