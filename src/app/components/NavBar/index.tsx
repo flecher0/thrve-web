@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { AppColor, Size } from "../";
-import Button from "../Button";
-import Icon, { IconType } from "../Icon";
+import UserCenter from "./UserCenter";
 
 export default function NavBar() {
   return (
@@ -19,13 +17,7 @@ export default function NavBar() {
         />
         THRVE
       </a>
-      <div className="flex items-center">
-        <div className="relative ml-3">
-          <Button size={Size.LG} rounded>
-            <Icon color={AppColor.PRIMARY} type={IconType.HAMBURGER} />
-          </Button>
-        </div>
-      </div>
+      <UserCenter />
     </nav>
   );
 }
