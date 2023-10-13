@@ -1,12 +1,10 @@
 "use client";
 
-import { HTMLAttributes, Fragment } from "react";
+import { HTMLAttributes } from "react";
 import Link from "next/link";
 import { Menu, Transition } from "@headlessui/react";
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+import { getCombinedClassName } from "..";
+import Button from "./Button";
 
 interface DropdownProps {
   menu?: MenuSection[];
@@ -21,8 +19,8 @@ interface MenuSection {
 interface SectionItem {
   name: string;
   href?: string;
-  onClick?: HTMLAttributes<HTMLElement>["onClick"];
   className?: string;
+  onClick?: HTMLAttributes<HTMLElement>["onClick"];
 }
 
 export default function Dropdown({ children, menu, content }: DropdownProps) {
@@ -30,7 +28,7 @@ export default function Dropdown({ children, menu, content }: DropdownProps) {
     "absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none";
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button>{children}</Menu.Button>
+      {children}
       {(menu || content) && (
         <Transition
           as="div"
@@ -51,7 +49,7 @@ export default function Dropdown({ children, menu, content }: DropdownProps) {
                         href ? (
                           <Link
                             href={href}
-                            className={classNames(
+                            className={getCombinedClassName(
                               active
                                 ? "bg-gray-100 text-gray-900"
                                 : "text-gray-700",
@@ -79,3 +77,5 @@ export default function Dropdown({ children, menu, content }: DropdownProps) {
     </Menu>
   );
 }
+
+export { Button };

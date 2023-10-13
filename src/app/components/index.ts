@@ -40,7 +40,7 @@ export const COLOR_CLASS_GROUPS: Record<AppColor, ColorClassGroup> = {
   },
 };
 
-// Text Sizes
+// Universal Sizes
 export enum Size {
   XS = "xs",
   SM = "sm",
@@ -50,11 +50,28 @@ export enum Size {
   XL2 = "2xl",
 }
 
-export const FONT_SIZE_CLASSES = {
+// Text Sizes
+export const FONT_SIZE_CLASSES: Record<Size, string> = {
   [Size.XS]: "text-xs",
+  // font-size: 0.75rem; /* 12px */
+  // line-height: 1rem; /* 16px */
   [Size.SM]: "text-sm",
+  // font-size: 0.875rem; /* 14px */
+  // line-height: 1.25rem; /* 20px */
   [Size.MD]: "text-base",
+  // font-size: 1rem; /* 16px */
+  // line-height: 1.5rem; /* 24px */
   [Size.LG]: "text-lg",
+  // font-size: 1.125rem; /* 18px */
+  // line-height: 1.75rem; /* 28px */
   [Size.XL]: "text-xl",
+  // font-size: 1.25rem; /* 20px */
+  // line-height: 1.75rem; /* 28px */
   [Size.XL2]: "text-2xl",
+  // font-size: 1.5rem; /* 24px */
+  // line-height: 2rem; /* 32px */
 };
+
+export function getCombinedClassName(...classes: (string | undefined)[]) {
+  return classes.filter(Boolean).join(" ");
+}
