@@ -59,27 +59,27 @@ export const COLOR_CLASS_GROUPS: Record<AppColor, ColorClassGroup> = {
     },
   },
   [AppColor.SECONDARY]: {
-    background: "bg-indigo-500",
-    border: "border-indigo-500",
-    fill: "fill-indigo-500",
-    text: "text-indigo-500",
+    background: "bg-neutral-500",
+    border: "border-neutral-500",
+    fill: "fill-neutral-500",
+    text: "text-neutral-500",
     active: {
-      background: "hover:bg-indigo-500",
-      border: "hover:border-indigo-500",
-      fill: "hover:fill-indigo-500",
-      text: "hover:text-indigo-500",
+      background: "hover:bg-neutral-500",
+      border: "hover:border-neutral-500",
+      fill: "hover:fill-neutral-500",
+      text: "hover:text-neutral-500",
     },
     focus: {
-      background: "hover:bg-indigo-500",
-      border: "hover:border-indigo-500",
-      fill: "hover:fill-indigo-500",
-      text: "hover:text-indigo-500",
+      background: "hover:bg-neutral-500",
+      border: "hover:border-neutral-500",
+      fill: "hover:fill-neutral-500",
+      text: "hover:text-neutral-500",
     },
     hover: {
-      background: "hover:bg-indigo-500",
-      border: "hover:border-indigo-500",
-      fill: "hover:fill-indigo-500",
-      text: "hover:text-indigo-500",
+      background: "hover:bg-neutral-500",
+      border: "hover:border-neutral-500",
+      fill: "hover:fill-neutral-500",
+      text: "hover:text-neutral-500",
     },
   },
   [AppColor.TERTIARY]: {
@@ -141,6 +141,28 @@ export enum Size {
   XL = "xl",
   XL2 = "2xl",
 }
+
+// Heading Sizes
+export const HEADING_SIZE_CLASSES: Record<Size, string> = {
+  [Size.XS]: "text-base",
+  // font-size: 1rem; /* 16px */
+  // line-height: 1.5rem; /* 24px */
+  [Size.SM]: "text-sm",
+  // font-size: 1.125rem; /* 18px */
+  // line-height: 1.75rem; /* 28px */
+  [Size.MD]: "text-xl",
+  // font-size: 1.25rem; /* 20px */
+  // line-height: 1.75rem; /* 28px */
+  [Size.LG]: "text-2xl",
+  // font-size: 1.5rem; /* 24px */
+  // line-height: 2rem; /* 32px */
+  [Size.XL]: "text-3xl",
+  // font-size: 1.875rem; /* 30px */
+  // line-height: 2.25rem; /* 36px */
+  [Size.XL2]: "text-4xl",
+  // font-size: 2.25rem; /* 36px */
+  // line-height: 2.5rem; /* 40px */
+};
 
 // Text Sizes
 export const FONT_SIZE_CLASSES: Record<Size, string> = {
