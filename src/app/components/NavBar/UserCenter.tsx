@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
 
+import { useState } from "react";
 import { AppColor } from "@/app/components";
 import Button from "@/app/components/Button";
 import Dropdown, { Button as DropdownButton } from "@/app/components/Dropdown";
@@ -12,6 +12,15 @@ export default function UserCenter() {
 
   return (
     <div className="flex items-center">
+      <Button
+        color={AppColor.SECONDARY}
+        border={false}
+        shadow={false}
+        rounded
+        className="hover:bg-gray-100"
+      >
+        Become a THRVE Partner
+      </Button>
       <Dropdown
         content={
           <div className="p-4">
@@ -21,7 +30,7 @@ export default function UserCenter() {
           </div>
         }
       >
-        <DropdownButton rounded>
+        <DropdownButton rounded threeD className="ml-2">
           <Icon color={AppColor.PRIMARY} type={IconType.HAMBURGER} />
         </DropdownButton>
       </Dropdown>

@@ -22,7 +22,6 @@ export default function Home() {
             color={AppColor.PRIMARY}
             size={Size.XL2}
             primary
-            className="font-semibold"
             style={{ minWidth: 120 }}
           >
             Join Now
@@ -30,7 +29,6 @@ export default function Home() {
           <Button
             color={AppColor.PRIMARY}
             size={Size.XL2}
-            className="font-semibold"
             style={{ minWidth: 120 }}
           >
             Log In
