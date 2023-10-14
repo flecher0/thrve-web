@@ -15,7 +15,7 @@ export default function NavBar() {
           width={40}
           priority
         />
-        THRVE
+        <span className="hidden md:block">THRVE</span>
       </a>
       <UserCenter />
     </nav>
