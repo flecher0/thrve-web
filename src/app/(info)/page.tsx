@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AppColor, Size } from "../components";
 import Button from "../components/Button";
+import { Title } from "../components/Typography";
 
 export const metadata: Metadata = {
   title: "Glow",
@@ -14,9 +15,9 @@ export default function Home() {
       style={{ minHeight: `calc(100vh - 72px)`, paddingTop: 72 }}
     >
       <div className="h-full mx-auto mb-6 text-center">
-        <h1 className="text-5xl font-bold tracking-tight">
+        <Title size={Size.XL2} className="tracking-tight" bold>
           Grow with Glow today
-        </h1>
+        </Title>
         <div className="w-full mt-10 flex items-center justify-center gap-x-6">
           <Button
             color={AppColor.PRIMARY}
