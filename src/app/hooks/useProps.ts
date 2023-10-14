@@ -11,7 +11,7 @@ export default function useProps<P = Props>(props: P, defaultClass = "") {
       ...props,
       className: defaultClass
         ? `${defaultClass ?? ""} ${(className as string) ?? ""}`
-        : className,
+        : (className as string) ?? "",
       style: style ?? {},
     }),
     [props, defaultClass, className, style],
